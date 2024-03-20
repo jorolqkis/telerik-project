@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Convert Spaces to Tabs",
+			"type": "shell",
+			"command": "find . -type f -name '*.js' -exec bash -c 'unexpand --tabs=4 \"{}\" > \"{}.tmp\" && mv \"{}.tmp\" \"{}\"' \\;",
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
